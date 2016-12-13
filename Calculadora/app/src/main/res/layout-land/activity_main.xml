@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/textoInformacion"
+        android:id="@+id/textoInformacion"
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@+id/linea"
+        android:layout_toStartOf="@+id/linea" />
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/radioOperaciones"
+        android:layout_below="@+id/textoIgual"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/radioSuma"
+            android:id="@+id/radioSuma" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/radioResta"
+            android:id="@+id/radioResta" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/radioMultiplicacion"
+            android:id="@+id/radioMultipicacion" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/radioDivision"
+            android:id="@+id/radioDivision" />
+    </RadioGroup>
+
+    <View
+        android:id="@+id/linea"
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:background="#aa5f5f5f" />
+
+    <EditText
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/editNumeroA"
+        android:hint="X"
+        android:gravity="center_horizontal"
+        android:layout_below="@+id/textoInformacion"
+        android:layout_toRightOf="@+id/linea"
+        android:layout_toEndOf="@+id/linea" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="+"
+        android:id="@+id/textoOperador"
+        android:layout_alignTop="@+id/editNumeroA"
+        android:layout_toRightOf="@+id/editNumeroA"
+        android:layout_toEndOf="@+id/editNumeroA"
+        android:layout_alignBottom="@+id/editNumeroA" />
+
+    <EditText
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/editNumeroB"
+        android:hint="Y"
+        android:gravity="center_horizontal"
+        android:layout_alignTop="@+id/textoOperador"
+        android:layout_toRightOf="@+id/textoOperador"
+        android:layout_toEndOf="@+id/textoOperador" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="="
+        android:id="@+id/textoIgual"
+        android:layout_alignTop="@+id/editNumeroB"
+        android:layout_toRightOf="@+id/editNumeroB"
+        android:layout_toEndOf="@+id/editNumeroB"
+        android:gravity="center_horizontal" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="0"
+        android:id="@+id/textoResultado"
+        android:layout_alignTop="@+id/textoIgual"
+        android:layout_toRightOf="@+id/textoIgual"
+        android:layout_toEndOf="@+id/textoIgual"
+        android:layout_marginLeft="30dp"
+        android:gravity="center_vertical" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/botonOperar"
+        android:id="@+id/botonOperar"
+        android:onClick="onClickOperar"
+        android:layout_alignBottom="@+id/radioOperaciones"
+        android:layout_toLeftOf="@+id/textoIgual"
+        android:layout_toStartOf="@+id/textoIgual" />
+
+</RelativeLayout>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <EditText
+        android:id="@+id/sqlite_nombre"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/nfc_nombre"
+        android:layout_below="@+id/tglReadWrite"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="56dp" />
+
+    <EditText
+        android:id="@+id/sqlite_autor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/nfc_autor"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/sqlite_nombre"
+        android:layout_alignParentLeft="true" />
+
+    <EditText
+        android:id="@+id/sqlite_tipo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/nfc_tipo"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/sqlite_autor"
+        android:layout_alignParentLeft="true" />
+
+    <EditText
+        android:id="@+id/nfc_estilo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/nfc_estilo"
+        android:layout_below="@+id/sqlite_tipo"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="267dp"
+        android:id="@+id/scrollView">
+
+    </ScrollView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/nfc_Serie"
+        android:id="@+id/num_serieNfc"
+        android:layout_above="@+id/btn_sqlite"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+</LinearLayout>

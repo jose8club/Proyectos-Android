@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Multimedia_Web</string>
+
+    <string name="action_settings">Configuracion</string>
+    <string name="title_activity_crear">Ingresar Nueva Obra de Arte</string>
+    <string name="title_activity_ver">Ver</string>
+    <string name="title_activity_id">Obtener Identificador</string>
+    <string name="title_activity_editar">Editar</string>
+    <string name="title_activity_eliminar">Eliminar</string>
+    <string name="title_activity_id_dos">Ver Obra escogida</string>
+    <string name="title_activity_video">Ver Video</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_eliminar_dos">EliminarDos</string>
+    <string name="title_activity_actualizar_dos">ActualizarDos</string>
+</resources>

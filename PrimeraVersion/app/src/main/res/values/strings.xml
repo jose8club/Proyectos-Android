@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">Primera Version</string>
+
+
+    <string name="action_settings">Ver Configuracion</string>
+    <string name="titulo01">Vista NFC</string>
+    <string name="nfc_nombre">Escríba el Nombre de la Obra</string>
+    <string name="nfc_autor">Escriba el Autor de la Obra</string>
+    <string name="nfc_estilo">Escriba el Estilo de la Obra</string>
+    <string name="nfc_tipo">Escriba el Tipo de Obra a Ingresar</string>
+    <string name="nfc_Serie">Numero de Serie</string>
+    <string name="title_activity_ingreso">Ingreso de Datos SQLite</string>
+    <string name="sql_fecha">Fecha de Creacion</string>
+    <string name="sql_nacionalidad">Escriba la Nacionalidad de la Obra</string>
+    <string name="sql_ingreso">Fecha de Ingreso</string>
+    <string name="title_activity_lista">Lista de Obras de Arte</string>
+    <string name="title_activity_actualizar">Actualizar Datos de Obra de Arte</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="label_Serie">Número de Serie: </string>
+    <string name="label_nombre">Nombre de la Obra: </string>
+    <string name="label_autor">Autor de la Obra: </string>
+    <string name="label_estilo">Estilo de la Obra: </string>
+    <string name="label_creacion">Fecha de Creación:</string>
+    <string name="label_nacionalidad">Nacionalidad de la Obra:</string>
+    <string name="label_ingreso">Fecha de Ingreso:</string>
+    <string name="label_tipo">Tipo de la Obra:</string>
+    <string name="title_activity_actualizar_nfc">Actualizar Etiqueta NFC</string>
+</resources>

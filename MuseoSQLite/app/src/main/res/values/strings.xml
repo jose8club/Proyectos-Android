@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Museo SQLite</string>
+
+    <string name="serie">Escríba el Numero de Serie</string>
+    <string name="nombre">Escríba el Nombre de la Obra</string>
+    <string name="guardar">Ingresar Obra</string>
+    <string name="hintserie">Ingrese Nuevo Numero de Serie</string>
+    <string name="hintnnombre">Ingrese Nuevo Nombre</string>
+    <string name="action_settings">Configuración</string>
+    <string name="title_activity_main">Ingreso de Obras de Arte</string>
+    <string name="title_activity_main2">Buscar Obras de Arte</string>
+    <string name="buscar">Buscar Numero de Serie</string>
+    <string name="eliminar">Eliminar</string>
+    <string name="hintbuscar">Buscar Numero de Serie</string>
+    <string name="actualizar">Actualizar</string>
+    <string name="lista">Lista</string>
+    <string name="title_activity_buscar__eliminar__actualizar">Buscar_Eliminar_Actualizar</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_lista">Lista de Obras de Arte</string>
+</resources>

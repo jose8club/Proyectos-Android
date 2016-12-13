@@ -1,0 +1,528 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity"
+    android:orientation="vertical">
+
+    <TabHost android:id="@android:id/tabhost"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <TabWidget android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@android:id/tabs" />
+
+            <FrameLayout android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@android:id/tabcontent" >
+
+                <LinearLayout android:id="@+id/nfc"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+                    <EditText
+                        android:id="@+id/nfc_nombre"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/nfc_nombre"
+                        android:layout_below="@+id/tglReadWrite"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginTop="56dp" />
+
+                    <EditText
+                        android:id="@+id/nfc_autor"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/nfc_autor"
+                        android:layout_alignParentStart="true"
+                        android:layout_below="@+id/nfc_nombre"
+                        android:layout_alignParentLeft="true" />
+
+                    <EditText
+                        android:id="@+id/nfc_tipo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/nfc_tipo"
+                        android:layout_alignParentStart="true"
+                        android:layout_below="@+id/nfc_autor"
+                        android:layout_alignParentLeft="true" />
+
+                    <EditText
+                        android:id="@+id/nfc_estilo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/nfc_estilo"
+                        android:layout_below="@+id/nfc_tipo"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true" />
+
+                    <ScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="175dp"
+                        android:id="@+id/scrollView" >
+
+                    </ScrollView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="37dp"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="@string/nfc_Serie"
+                        android:id="@+id/num_serieNfc"
+                        android:layout_above="@+id/btn_sqlite"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentEnd="true" />
+
+                </LinearLayout>
+
+                <LinearLayout android:id="@+id/locales"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+                    <LinearLayout
+                        android:id="@+id/layout_serie"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:baselineAligned="true"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:id="@+id/lbl_serie"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="2sp"
+                            android:paddingRight="2sp"
+                            android:text="@string/label_Serie"
+                            android:textSize="17sp" />
+
+
+
+                        <TextView
+                            android:id="@+id/act_serie"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="14"
+                            android:textSize="17sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/layout_nombre"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:baselineAligned="true"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:id="@+id/lbl_nombre"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="2sp"
+                            android:paddingRight="2sp"
+                            android:text="@string/label_nombre"
+                            android:textSize="17sp" />
+
+                        <EditText
+                            android:id="@+id/act_nombre"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="14"
+                            android:textSize="17sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/layout_autor"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:baselineAligned="true"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:id="@+id/lbl_autor"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="2sp"
+                            android:paddingRight="2sp"
+                            android:text="@string/label_autor"
+                            android:textSize="17sp" />
+
+                        <EditText
+                            android:id="@+id/act_autir"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="14"
+                            android:textSize="17sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/layout_tipo"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:baselineAligned="true"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:id="@+id/lbl_tipo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="2sp"
+                            android:paddingRight="2sp"
+                            android:text="@string/label_tipo"
+                            android:textSize="17sp" />
+
+                        <EditText
+                            android:id="@+id/act_tipo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="14"
+                            android:textSize="17sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/layout_estilo"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:baselineAligned="true"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:id="@+id/lbl_estilo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="2sp"
+                            android:paddingRight="2sp"
+                            android:text="@string/label_estilo"
+                            android:textSize="17sp" />
+
+                        <EditText
+                            android:id="@+id/act_estilo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="14"
+                            android:textSize="17sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/layout_creacion"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:baselineAligned="true"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:id="@+id/lbl_creacion"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="2sp"
+                            android:paddingRight="2sp"
+                            android:text="@string/label_creacion"
+                            android:textSize="17sp" />
+
+                        <EditText
+                            android:id="@+id/act_creacion"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="14"
+                            android:textSize="17sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/layout_nacion"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:baselineAligned="true"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:id="@+id/lbl_nacion"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="2sp"
+                            android:paddingRight="2sp"
+                            android:text="@string/label_nacionalidad"
+                            android:textSize="17sp" />
+
+                        <EditText
+                            android:id="@+id/act_nacion"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="14"
+                            android:textSize="17sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/layout_ingreso"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:baselineAligned="true"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:id="@+id/lbl_ingreso"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="2sp"
+                            android:paddingRight="2sp"
+                            android:text="@string/label_ingreso"
+                            android:textSize="17sp" />
+
+                        <EditText
+                            android:id="@+id/act_ingreso"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="14"
+                            android:textSize="17sp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+                <LinearLayout android:id="@+id/servidor"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+                    <LinearLayout
+                        android:id="@+id/layout_serie_serv"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:baselineAligned="true"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:id="@+id/lbl_serie_serv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="2sp"
+                            android:paddingRight="2sp"
+                            android:text="@string/label_Serie"
+                            android:textSize="17sp" />
+
+
+
+                        <TextView
+                            android:id="@+id/act_serie_serv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="14"
+                            android:textSize="17sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/layout_nombre_serv"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:baselineAligned="true"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:id="@+id/lbl_nombre_serv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="2sp"
+                            android:paddingRight="2sp"
+                            android:text="@string/label_nombre"
+                            android:textSize="17sp" />
+
+                        <EditText
+                            android:id="@+id/act_nombre_serv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="14"
+                            android:textSize="17sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/layout_autor_serv"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:baselineAligned="true"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:id="@+id/lbl_autor_serv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="2sp"
+                            android:paddingRight="2sp"
+                            android:text="@string/label_autor"
+                            android:textSize="17sp" />
+
+                        <EditText
+                            android:id="@+id/act_autir_serv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="14"
+                            android:textSize="17sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/layout_tipo_serv"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:baselineAligned="true"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:id="@+id/lbl_tipo_serv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="2sp"
+                            android:paddingRight="2sp"
+                            android:text="@string/label_tipo"
+                            android:textSize="17sp" />
+
+                        <EditText
+                            android:id="@+id/act_tipo_serv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="14"
+                            android:textSize="17sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/layout_estilo_serv"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:baselineAligned="true"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:id="@+id/lbl_estilo_serv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="2sp"
+                            android:paddingRight="2sp"
+                            android:text="@string/label_estilo"
+                            android:textSize="17sp" />
+
+                        <EditText
+                            android:id="@+id/act_estilo_serv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="14"
+                            android:textSize="17sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/layout_creacion_serv"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:baselineAligned="true"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:id="@+id/lbl_creacion_serv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="2sp"
+                            android:paddingRight="2sp"
+                            android:text="@string/label_creacion"
+                            android:textSize="17sp" />
+
+                        <EditText
+                            android:id="@+id/act_creacion_serv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="14"
+                            android:textSize="17sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/layout_nacion_serv"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:baselineAligned="true"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:id="@+id/lbl_nacion_serv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="2sp"
+                            android:paddingRight="2sp"
+                            android:text="@string/label_nacionalidad"
+                            android:textSize="17sp" />
+
+                        <EditText
+                            android:id="@+id/act_nacion_serv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="14"
+                            android:textSize="17sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/layout_ingreso_serv"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:baselineAligned="true"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:id="@+id/lbl_ingreso_serv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="2sp"
+                            android:paddingRight="2sp"
+                            android:text="@string/label_ingreso"
+                            android:textSize="17sp" />
+
+                        <EditText
+                            android:id="@+id/act_ingreso_serv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="14"
+                            android:textSize="17sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:weightSum="1">
+
+                        <View
+                            android:id="@+id/linea"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_centerInParent="true"
+                            android:background="#aa5f5f5f" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/imageView"
+                            android:layout_gravity="center_horizontal" />
+
+                    </LinearLayout>
+                </LinearLayout>
+            </FrameLayout>
+        </LinearLayout>
+    </TabHost>
+</LinearLayout>

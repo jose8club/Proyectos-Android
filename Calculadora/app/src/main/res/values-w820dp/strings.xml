@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="textoInformacion">Selecciona la operación que deseas realizar con los dos números.</string>
+    <string name="radioSuma">Suma</string>
+    <string name="radioResta">Resta</string>
+    <string name="radioMultiplicacion">Multiplicación</string>
+    <string name="radioDivision">División</string>
+    <string name="botonOperar">Operar</string>
+</resources>

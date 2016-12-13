@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Calculadora</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="textoInformacion">Selecciona la operación que deseas realizar con los dos números.</string>
+    <string name="radioSuma">Suma</string>
+    <string name="radioResta">Resta</string>
+    <string name="radioMultiplicacion">Multiplicación</string>
+    <string name="radioDivision">División</string>
+    <string name="botonOperar">Operar</string>
+    <string name="action_settings">Acerca de</string>
+</resources>
