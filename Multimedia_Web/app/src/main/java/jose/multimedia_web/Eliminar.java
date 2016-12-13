@@ -75,6 +75,9 @@ public class Eliminar extends ActionBarActivity {
         spinnerArrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         sp_id.setAdapter(spinnerArrayAdapter);
 
+        /**
+         * Regresa a la pantalla principal
+         */
         btn_ret.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -83,6 +86,9 @@ public class Eliminar extends ActionBarActivity {
             }
         });
 
+        /**
+         * Eliminacion definitiva
+         */
         btn_eliminar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -200,16 +206,6 @@ public class Eliminar extends ActionBarActivity {
 
         @Override
         protected void onPostExecute(String s) {
-            //id_nombre.setText(s.substring(14,70).toString());
-            //id_autor.setText(s.substring(72,150).toString());
-            //au = s.substring(151,160).toString();
-            //vi = s.substring(161,180).toString();
-            //Ejecucion(s);
-            //id_nombre.setText(s);
-            //id_uno.setText(s);
-            //el_json.setText(s);
-            //Toast.makeText(getApplicationContext(), s, Toast.LENGTH_LONG).show();
-            //el_json.setText(s);
         }
 
         @Override

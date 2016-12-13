@@ -22,7 +22,7 @@ public class MainActivity extends ActionBarActivity {
     /**
      * botones para acceder a las nuevas pantallas
      */
-    Button btn_crear, btn_ver, btn_id, btn_editar, btn_eliminar;
+    Button btn_crear, btn_ver, btn_id;
 
     /**
      * Ver la imagen que se esta viendo por delante por decoracion
@@ -30,7 +30,6 @@ public class MainActivity extends ActionBarActivity {
      */
     private ImageView imagen;
     public final static String URI = "/storage/emulated/0/Documents/Celular/development.png";
-    //public final static String URI = "C:/Users/Alicia/AndroidStudioProjects/Multimedia_Web/app/src/main/res/drawable/development.png";
 
     /**
      *  Mensaje de creacion
@@ -44,8 +43,6 @@ public class MainActivity extends ActionBarActivity {
         btn_crear = (Button)findViewById(R.id.btn_volver);
         btn_ver = (Button)findViewById(R.id.btn_ver);
         btn_id = (Button)findViewById(R.id.btn_id);
-        btn_editar = (Button)findViewById(R.id.btn_editar);
-        btn_eliminar = (Button)findViewById(R.id.btn_eliminar);
         imagen = (ImageView)findViewById(R.id.image_delantera);
 
         /**
@@ -77,28 +74,6 @@ public class MainActivity extends ActionBarActivity {
             @Override
             public void onClick(View v) {
                 Intent u = new Intent(getApplicationContext(), Id.class);
-                startActivity(u);
-            }
-        });
-
-        /**
-         * Se accede a editar una obra
-         */
-        btn_editar.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent u = new Intent(getApplicationContext(), Editar.class);
-                startActivity(u);
-            }
-        });
-
-        /**
-         * Se accede a eliminar a una obra
-         */
-        btn_eliminar.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent u = new Intent(getApplicationContext(), Eliminar.class);
                 startActivity(u);
             }
         });

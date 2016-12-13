@@ -190,6 +190,10 @@ public class Editar extends ActionBarActivity {
             act_autor.setText(arreglo[2]);
             act_audio.setText(arreglo[3]);
             act_video.setText(arreglo[4]);
+
+            /**
+             * Confirmacion de edicion
+             */
             btn_editar.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -202,8 +206,6 @@ public class Editar extends ActionBarActivity {
                     startActivity(u);
                 }
             });
-            //Ejecucion(s);
-            //id_nombre.setText(s);
 
         }
 

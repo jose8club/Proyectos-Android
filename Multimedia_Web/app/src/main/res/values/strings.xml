@@ -11,6 +11,6 @@
     <string name="title_activity_video">Ver Video</string>
 
     <string name="hello_world">Hello world!</string>
-    <string name="title_activity_eliminar_dos">EliminarDos</string>
-    <string name="title_activity_actualizar_dos">ActualizarDos</string>
+    <string name="title_activity_eliminar_dos">Confirmacion de Eliminacion</string>
+    <string name="title_activity_actualizar_dos">Confirmacion de Cambios</string>
 </resources>

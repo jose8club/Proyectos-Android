@@ -76,6 +76,9 @@ public class Crear extends ActionBarActivity {
         act_video = (EditText)findViewById(R.id.act_video);
         ing_json = (TextView)findViewById(R.id.ing_json);
 
+        /**
+         * Boton para crear un nuevo registro
+         */
         btn_ing.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -89,6 +92,9 @@ public class Crear extends ActionBarActivity {
             }
         });
 
+        /**
+         * Boton para retornar a la pantalla principal
+         */
         btn_retornar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

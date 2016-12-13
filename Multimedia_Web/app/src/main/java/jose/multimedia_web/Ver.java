@@ -34,6 +34,10 @@ public class Ver extends ActionBarActivity {
      * ListView creado para poder observar las obras
      */
     ListView lv;
+
+    /**
+     * Boton para retornar a la pantalla principal
+     */
     Button btn_retornar;
 
     /**
@@ -69,20 +73,12 @@ public class Ver extends ActionBarActivity {
         id = new ArrayList<>();
         nombres = new ArrayList<>();
         autores = new ArrayList<>();
-        //webservice = new Servicios();
-        //id = webservice.obt_id();
-        //nombres = webservice.obt_nombre();
-        //nombres = webservice.obt_autor();
-        //id = new ArrayList<>();
-        //id.add("01239493020");
-        //nombres = new ArrayList<>();
-        //nombres.add("Napoleon en Rusia");
-        //autores = new ArrayList<>();
-        //autores.add("El guardian en el Centeno");
         conexion = new WebService();
         conexion.execute(OBTENER, "1"); // Parámetros que recibe doInBackground
 
-
+        /**
+         * Retorna a la pantalla principal
+         */
         btn_retornar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -92,42 +88,6 @@ public class Ver extends ActionBarActivity {
         });
     }
 
-    /**
-     * Busca los id para la lista
-     * @return id
-     */
-    /*
-    private ArrayList<String> obtId() {
-        id = new ArrayList<>();
-        conexion = new WebService();
-        conexion.execute(OBTENER, "1"); // Parámetros que recibe doInBackground
-        return id;
-    }
-    */
-    /**
-     * Busca los nombres para la lista
-     * @return nombres
-     */
-    /*
-    private ArrayList<String> obtNombres() {
-        nombres = new ArrayList<>();
-        conexion = new WebService();
-        conexion.execute(OBTENER, "1"); // Parámetros que recibe doInBackground
-        return nombres;
-    }
-    */
-    /**
-     * Busca los autores para la lista
-     * @return autores
-     */
-    /*
-    private ArrayList<String> obtAutores() {
-        autores = new ArrayList<>();
-        conexion = new WebService();
-        conexion.execute(OBTENER, "1"); // Parámetros que recibe doInBackground
-        return autores;
-    }
-    */
     /**
      * Este metodo se creo para llenar la lista con la serie siendo invisible, el nombre y autor de la obra
      * @param id

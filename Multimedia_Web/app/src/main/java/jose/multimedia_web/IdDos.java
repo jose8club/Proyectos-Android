@@ -257,12 +257,6 @@ public class IdDos extends ActionBarActivity {
                                     respuestaJSON.getJSONObject("obra").getString("autor") + " " +
                                     respuestaJSON.getJSONObject("obra").getString("audio") + " " +
                                     respuestaJSON.getJSONObject("obra").getString("video");
-
-
-                            //id_nombre.setText(respuestaJSON.getJSONObject("obra").getString("nombre").toString());
-                            //id_autor.setText(respuestaJSON.getJSONObject("obra").getString("autor").toString());
-                            //au = respuestaJSON.getJSONObject("obra").getString("audio").toString();
-                            //vi = respuestaJSON.getJSONObject("obra").getString("video").toString();
                         }
                         else if (resultJSON.equals("2")){ // Si el estado es 2 entonces es porque la operación fue un fracaso
                             devuelve = "No hay obra que devolver";
@@ -295,9 +289,6 @@ public class IdDos extends ActionBarActivity {
             id_autor.setText(arreglo[2]);
             au = arreglo[3];
             vi = arreglo[4];
-            //Ejecucion(s);
-            //id_nombre.setText(s);
-
         }
 
         @Override

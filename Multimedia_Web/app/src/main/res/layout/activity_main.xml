@@ -90,46 +90,11 @@
             android:id="@+id/textView6"
             android:layout_weight="0.00" />
 
-        <LinearLayout
-            android:id="@+id/layout_editar"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:baselineAligned="true"
-            android:orientation="horizontal" >
-
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Editar Obra"
-                android:id="@+id/btn_editar" />
-        </LinearLayout>
-
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/textView"
             android:layout_weight="0.00" />
-
-        <LinearLayout
-            android:id="@+id/layout_eliminar"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:baselineAligned="true"
-            android:orientation="horizontal"
-            android:weightSum="1">
-
-            <!--<View
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:layout_weight="0.78"
-                />-->
-
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Eliminar Obra"
-                android:id="@+id/btn_eliminar" />
-        </LinearLayout>
 
         <TextView
             android:layout_width="match_parent"
@@ -157,7 +122,7 @@
                 android:layout_weight="0.51" />
 
             <ImageView
-                android:layout_width="193dp"
+                android:layout_width="195dp"
                 android:layout_height="match_parent"
                 android:id="@+id/image_delantera"
                 android:layout_gravity="center_vertical" />

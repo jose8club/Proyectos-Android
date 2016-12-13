@@ -78,15 +78,6 @@ public class Video extends Activity {
             }
         });
 
-        /**
-         * Se reproduce el video de esta manera
-         */
-        /*
-        Uri path = Uri.parse(OBRA + vid);
-        video_obra.setVideoURI(path);
-        video_obra.setMediaController(new MediaController(this));
-        video_obra.start();
-        */
     }
 
 }
